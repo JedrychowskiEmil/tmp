@@ -1,3 +1,5 @@
+package tmp;
+
 
 
 import java.io.*;
@@ -17,7 +19,8 @@ class Main {
         FileCSSFixer fileCSSFixer = new FileCSSFixer(file, path2);
         File tmpFile = fileCSSFixer.pasteIfMissing(lookingFor, lookingForFlag);
         System.out.println(tmpFile.getAbsolutePath());
-        FileCSSFixer fileCSSFixer2 = new FileCSSFixer(tmpFile, path2);
-        File tmpFile2 = fileCSSFixer.pasteIfMissing(lookingFor, lookingForFlag);
+        FileCSSFixer fileCSSFixer2 = new FileCSSFixer(tmpFile, path);
+        File tmpFile2 = fileCSSFixer2.pasteIfMissing(lookingFor, lookingForFlag);
+        System.out.println(tmpFile2.getAbsolutePath());
     }
 }
